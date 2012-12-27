@@ -1,0 +1,14 @@
+include ./layout
+  form#code-form.forms(method="POST", action="/test-flight")
+    div.row
+      input.width-33(type="text", name="fnname",id="fnname", placeholder="Function Name")
+    div.row.code-wrapper.form-component
+      textarea#code(name="code")= (script==='')? someCode() : script
+    div.row.container.form-component
+      div#info.twothird
+      div.third
+        div.push-right
+          button#test-flight.btn &#9992; TestFlight
+          if hasThisRoute("/c")
+            = " "
+            button#save-btn.btn Create

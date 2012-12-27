@@ -1,0 +1,14 @@
+include ./layout
+  form#edit-form.forms(method="POST", action="/test-flight")
+    div.row
+      input.width-33(type="text", name="fnname",id="fnname", value=fnname)
+      input(type="hidden", id="code-id", name="code-id", value=id)
+    div.row.code-wrapper.form-component
+      textarea#code(name="code")= (script==='')? someCode() : script
+    div.row.container.form-component
+      div#info.twothird
+      div.third
+      div.push-right
+        button#test-flight.btn &#9992; TestFlight
+        = " "
+        button#update-btn.btn Update

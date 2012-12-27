@@ -1,0 +1,18 @@
+include ./layout
+  div.row
+    h2 All Scripts
+  for g,i in data
+    div.row
+      for o,j in g
+        if o!==null
+          div.third
+            if o.name!==''
+              h3= o.name
+            else
+              h3.gray-light NoName
+            div
+              pre= o.script
+            div.icons.push-right
+              a(href="/do/"+o.id, title="exec this script") &#9786;
+              = " "
+              a(href="/r/"+o.id, title="show or edit this script") &#9998;

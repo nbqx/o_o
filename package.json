@@ -1,0 +1,14 @@
+{"name": "o_o",
+ "version": "0.0.1",
+ "dependencies": {
+     "express": "3.x",
+     "jade": "*",
+     "connect-flash": "*",
+     "mongoose": "3.x",
+     "request": "*",
+     "underscore": "*"
+ },
+ "scripts": {
+   "start": "node-dev ./app/dev.js"
+ }
+}

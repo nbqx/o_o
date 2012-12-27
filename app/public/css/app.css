@@ -1,0 +1,47 @@
+div.wrapper{
+  margin: auto;
+  max-width: 900px;
+  padding: 36px 10px;
+}
+
+header#header {
+  /* border-bottom: 1px solid #EEEEEE; */
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  padding-bottom: 1.5em;
+}
+
+nav#nav{
+  float: right;
+  padding-top: 1.1em;
+}
+
+#nav ul, #navside ul {
+  list-style: none outside none;
+  margin: 0;
+}
+
+#nav ul li {
+  color: #999999;
+  float: left;
+  margin-left: 1.5em;
+}
+
+div.code-wrapper{
+  border: 1px solid #EEE;
+}
+textarea#code{}
+div.form-component{
+  margin-top: 0.7em;
+}
+
+div.icons{
+  margin-top: -1.0em;
+}
+
+footer#footer{
+  border-top:1px solid #eee;
+  font-size: 0.85em;
+  margin: 1.5em 0;
+  padding-top: 1.5em;
+}
