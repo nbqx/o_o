@@ -3,24 +3,6 @@ var _ = require('underscore');
 var Code = require('./models/db').Code;
 var determineContext = require('./middles/determineContext');
 
-// https://gist.github.com/999690
-_.mixin({
-  inGroupsOf: function(array, number, fillWith) {
-    fillWith = fillWith || null;
-    var index = -number, slices = [];
-    
-    if (number < 1) return array;
-    
-    while ((index += number) < array.length) {
-      var s = array.slice(index, index + number);
-      while(s.length < number)
-        s.push(fillWith);
-      slices.push(s);
-    }
-    return slices;
-  }
-});
-
 module.exports = function(app){
 
   // call script in mongodb
@@ -177,7 +159,9 @@ module.exports = function(app){
         });
       });
 
-      var data = _.inGroupsOf(ret,3);
+      var data = _.groupBy(ret, function(o,idx){
+        return Math.floor(idx/3);
+      });
       res.render('all', {data: data, error: req.flash('error'), info: req.flash('info')});
     });
 
