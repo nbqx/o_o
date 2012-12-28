@@ -162,7 +162,7 @@ module.exports = function(app){
       var data = _.groupBy(ret, function(o,idx){
         return Math.floor(idx/3);
       });
-      res.render('all', {data: data, error: req.flash('error'), info: req.flash('info')});
+      res.render('all', {data: _.toArray(data), error: req.flash('error'), info: req.flash('info')});
     });
 
     Code.find({}, function(err,docs){
