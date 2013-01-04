@@ -9,6 +9,6 @@
      "underscore": "*"
  },
  "scripts": {
-   "start": "node-dev ./app/dev.js"
+   "start": "node-dev ./app/index.js"
  }
 }

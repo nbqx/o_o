@@ -42,3 +42,8 @@ app.locals({
 });
 
 module.exports = app;
+
+// rubyの $0 == __FILE__ とおなじ
+if(require.main === module){
+  app.listen(process.env.PORT || 3000);
+}
